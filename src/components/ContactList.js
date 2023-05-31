@@ -32,7 +32,7 @@
 
    return (
       <div className="App">
-         <BrowserRouter basename="Contact_List">
+         <BrowserRouter basename="Bootstrap_ContactList">
          <ToastContainer />
          <Navbar />
 
