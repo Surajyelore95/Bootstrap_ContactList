@@ -1,6 +1,9 @@
-import React from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react"; //import reac liabrary
+//imports the useDispatch and useSelector hooks from the React-Redux library.
+import { useDispatch, useSelector } from "react-redux"; 
+//imports the Link component from the React Router DOM library.
 import { Link } from "react-router-dom";
+//imports the toast function from the Toastify library.
 import { toast } from "react-toastify";
 import "./home.css";
 
@@ -9,15 +12,18 @@ const Home = () => {
 
   const dispatch = useDispatch();
 
+  //Deletes a contact using the dispatch function and displays a success message using Toastify.
   const deleteContact = (id) => {
     dispatch({ type: "DELETE_CONTACT", payload: id });
     toast.success("Contact deleted successfully!");
   };
 
+  //Home Componants
   return (
     <div className="container-fluid">
       <div className="row">
         <div className="col-md-12 my-5">
+          {/* table displays a list of contacts. */}
           <table className="table table-hover">
             <thead className="text-white bg-secondary text-start">
               <tr>

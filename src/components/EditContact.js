@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
+
+//used to create state variables for the name, email, and number fields
 const EditContact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -18,6 +20,7 @@ const EditContact = () => {
     (contact) => contact.id === parseInt(id)
   );
 
+  //used to update these fields
   useEffect(() => {
     if (currentContact) {
       setName(currentContact.name);
@@ -55,7 +58,7 @@ const EditContact = () => {
       email,
       number,
     };
-
+    //displays a success message using Toastify when a contact is updated successfully.
     dispatch({ type: "UPDATE_CONTACT", payload: data });
     toast.success("Contact updated successfully!");
     navigate("/");
