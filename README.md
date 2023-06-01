@@ -1,7 +1,7 @@
 # Bootstrap_ContactList
  
 Skill test of React Module of Coding Ninjas
-for live view ======>   https://dadhimukh.github.io/Contact_List/
+for live view ======>   https://surajyelore95.github.io/Bootstrap_ContactList/
 
 ## Cloning and Running the Application in local
 
